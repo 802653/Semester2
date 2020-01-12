@@ -6,14 +6,14 @@
 public class Word implements Comparable<Word>
 {
   private String orig;
-
-  public Word(String s) { orig = s; };
+  private int length;
+  public Word(String s) { orig = s;};
 
   public int compareTo(Word other) 
   {
      //Comparable[] list = {orig, other};
-     if(orig.length > other.length) {return 1;}
-     else if(orig.length < other.length) {return -1;}
+     if(orig.toString().length() > other.toString().length()) {return 1;}
+     else if(orig.length() < other.toString().length()) {return -1;}
      else{return 0;}
   }
 
