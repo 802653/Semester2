@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=CelebrityGame
 comment0.text=\r\n\ The\ framework\ for\ the\ Celebrity\ Game\ project\r\n\ \r\n\ @author\ cody.henrichsen\r\n\ @version\ 2.3\ 25/09/2018\ refactored\ the\ prepareGame\ and\ play\ methods\r\n
-comment1.params=
-comment1.target=CelebrityGame()
+comment1.params=celeb
+comment1.target=CelebrityGame(java.util.ArrayList)
 comment1.text=\r\n\ Builds\ the\ game\ and\ starts\ the\ GUI\r\n
 comment10.params=
 comment10.target=java.lang.String\ sendAnswer()

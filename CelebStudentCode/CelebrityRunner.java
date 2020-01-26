@@ -3,15 +3,23 @@
  * @author cody.henrichsen
  *
  */
+import java.util.*;
 public class CelebrityRunner
 {
     /**
      * The entry point of the Java application.
        * @param args Unused parameter as it is a GUI based program.
      */
+    private static ArrayList<Celebrity> celeb = new ArrayList<Celebrity>();
     public static void main(String [] args)
     {
-        Celebrity Trump = new Celebrity("Trump","Featured on Second Home Alone");
-        System.out.println(Trump.getName() + " " + Trump.getHint());
+        
+        celeb.add(new Celebrity("Lebron James", "Star Lakers Player"));
+        celeb.add(new Celebrity("Patrick Mahomes", "Star Cheifs Quaterback"));
+        celeb.add(new Celebrity("Justin Trudeau", "First African-American PM of Canada"));
+        System.out.println(celeb);
+        CelebrityGame game = new CelebrityGame(celeb);
+        game.prepareGame();
+        game.play();
     }
 }
