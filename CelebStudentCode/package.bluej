@@ -14,6 +14,7 @@ dependency4.type=UsesDependency
 dependency5.from=CelebrityPanel
 dependency5.to=CelebrityGame
 dependency5.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=552
@@ -29,6 +30,26 @@ package.editor.y=-8
 package.frame.height=1176
 package.frame.width=1936
 package.numDependencies=5
+=======
+dependency6.from=CelebrityRunner
+dependency6.to=Celebrity
+dependency6.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=1481
+editor.fx.0.y=578
+objectbench.height=93
+objectbench.width=1658
+package.divider.horizontal=0.6
+package.divider.vertical=0.9234889058913542
+package.editor.height=1200
+package.editor.width=1568
+package.editor.x=0
+package.editor.y=0
+package.frame.height=1407
+package.frame.width=1698
+package.numDependencies=6
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 package.numTargets=7
 package.showExtends=true
 package.showUses=true
@@ -43,47 +64,81 @@ target1.name=SimpleGUIRunner
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=140
+<<<<<<< HEAD
 target1.x=540
+=======
+target1.x=470
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 target1.y=20
 target2.height=50
 target2.name=CelebrityFrame
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
+<<<<<<< HEAD
 target2.x=80
 target2.y=70
+=======
+target2.x=880
+target2.y=320
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 target3.height=50
 target3.name=StartPanel
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=90
+<<<<<<< HEAD
 target3.x=700
 target3.y=120
+=======
+target3.x=750
+target3.y=80
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 target4.height=50
 target4.name=Celebrity
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=80
+<<<<<<< HEAD
 target4.x=20
 target4.y=250
+=======
+target4.x=330
+target4.y=120
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 target5.height=50
 target5.name=CelebrityRunner
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=130
+<<<<<<< HEAD
 target5.x=300
 target5.y=50
+=======
+target5.x=1030
+target5.y=80
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 target6.height=50
 target6.name=CelebrityGame
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
+<<<<<<< HEAD
 target6.x=370
 target6.y=290
+=======
+target6.x=340
+target6.y=240
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
 target7.height=50
 target7.name=CelebrityPanel
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=110
+<<<<<<< HEAD
 target7.x=490
 target7.y=470
+=======
+target7.x=520
+target7.y=610
+>>>>>>> 6fd1d72b67c3cf7d78746b0bf6d9863a9a302d6a
