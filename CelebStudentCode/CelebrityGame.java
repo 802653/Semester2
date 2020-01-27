@@ -16,19 +16,18 @@ public class CelebrityGame
      * The GUI frame for the Celebrity game.
      */
     CelebrityFrame gameWindow = new CelebrityFrame(this);
-  
 
     /**
      * The ArrayList of Celebrity values that make up the game
      */
-    private ArrayList<Celebrity> celebs = new ArrayList<Celebrity>();
-    private Celebrity currentCeleb;
+    private ArrayList<Celebrity> celebGameList = new ArrayList<Celebrity>();
+    private Celebrity gameCelebrity;
     /**
      * Builds the game and starts the GUI
      */
     public CelebrityGame(ArrayList<Celebrity> celeb)
     {
-        celebs = celeb;
+        celebGameList = celeb;
         gameWindow = new CelebrityFrame(this);
     }
 
@@ -37,8 +36,8 @@ public class CelebrityGame
      */
     public void prepareGame()
     {
-        celebs = new ArrayList<Celebrity>(celebs);
-        
+        celebGameList = new ArrayList<Celebrity>(celebGameList);
+
         gameWindow.replaceScreen("START");
     }
 
@@ -62,25 +61,26 @@ public class CelebrityGame
      */
     public void play()
     {
-        if(celebs != null && celebs.size() > 0) {
-           this.currentCeleb = celebs.get(0);
-           gameWindow.replaceScreen("GAME");
+        if(celebGameList != null && celebGameList.size() > 0) {
+            this.gameCelebrity = celebGameList.get(0);
+            gameWindow.replaceScreen("GAME");
         }
         else System.out.println("failure to execute");
     }
-        /**
-         * Adds a Celebrity of specified type to the game list
-         * 
-         * @param name
-         *            The name of the celebrity
-         * @param guess
-         *            The clue(s) for the celebrity
-         * @param type
-         *            What type of celebrity
-         */
-        public void addCelebrity(String name, String guess, String type)
-        {
-        celebs.add(new Celebrity(name, guess)) ;
+
+    /**
+     * Adds a Celebrity of specified type to the game list
+     * 
+     * @param name
+     *            The name of the celebrity
+     * @param guess
+     *            The clue(s) for the celebrity
+     * @param type
+     *            What type of celebrity
+     */
+    public void addCelebrity(String name, String guess, String type)
+    {
+        celebGameList.add(new Celebrity(name, guess)) ;
     }
 
     /**
@@ -90,7 +90,7 @@ public class CelebrityGame
      */
     public boolean validateCelebrity(String name)
     {
-        if(name.length() >= 4) return true;
+        if(name.trim().length() >= 4) return true;
         else return false;
     }
 
@@ -103,7 +103,7 @@ public class CelebrityGame
      */
     public boolean validateClue(String clue, String type)
     {
-        if(clue.length() >= 10) return true;
+        if(clue.trim().length() >= 10) return true;
         else return false;
     }
 
