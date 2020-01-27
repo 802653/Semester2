@@ -11,10 +11,10 @@ public class Word implements Comparable<Word>
 
   public int compareTo(Word other) 
   {
-     //Comparable[] list = {orig, other};
-     if(orig.length > other.length) {return 1;}
-     else if(orig.length < other.length) {return -1;}
-     else{return 0;}
+
+     //must add code to complete 
+
+     return 1; 
   }
 
   public String toString() { return orig; }
