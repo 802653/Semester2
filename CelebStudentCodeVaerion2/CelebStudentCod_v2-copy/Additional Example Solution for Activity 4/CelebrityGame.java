@@ -1,5 +1,3 @@
-//package gui;
-
 import java.util.ArrayList;
 
 /**
@@ -32,7 +30,6 @@ public class CelebrityGame
   {
     celebGameList = new ArrayList<Celebrity>();
     gameWindow = new CelebrityFrame(this);
-    prepareGame();
   }
   
   /**
@@ -60,7 +57,7 @@ public class CelebrityGame
      * Why use the .trim() method on the supplied String parameter? What
      * would need to be done to support a score?
      */
-    if ((guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer())) || guess.equals("DEBUG"))
+    if (guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer()))
     {
       matches = true;
       celebGameList.remove(0);
@@ -74,6 +71,7 @@ public class CelebrityGame
       }
       
     }
+    
     return matches;
   }
   
@@ -91,7 +89,7 @@ public class CelebrityGame
     }
   }
   
-    /**
+  /**
    * Adds a Celebrity of specified type to the game list
    * 
    * @param name
@@ -103,14 +101,24 @@ public class CelebrityGame
    */
   public void addCelebrity(String name, String guess, String type)
   {
-    
+    /*
+     * How would you add other subclasses to this CelebrityGame?
+     */
     Celebrity currentCelebrity;
-    if(type.equals("Celebrity")) currentCelebrity = new Celebrity(name, guess);
-    else currentCelebrity = new LiteraryCelebrity(name, guess);
+    if (type.equalsIgnoreCase("Literature"))
+    {
+      currentCelebrity = new LiteratureCelebrity(name, guess);
+    }
+    else if (type.equalsIgnoreCase("Cartoon"))
+    {
+      currentCelebrity = new CartoonCelebrity(name, guess);
+    }
+    else
+    {
+      currentCelebrity = new Celebrity(name, guess);
+    }
     this.celebGameList.add(currentCelebrity);
-    
   }
-  
   
   /**
    * Validates the name of the celebrity. It must have at least 4 characters.
@@ -119,18 +127,6 @@ public class CelebrityGame
    */
   public boolean validateCelebrity(String name)
   {
-    boolean validCelebrity = false;
-    
-    if (name.trim().length() >= 4)
-    {
-      validCelebrity = true;
-    }
-    
-    return validCelebrity;
-  }
-  
-  public boolean validateCelebrity2(String name)
-  {
     if (name.trim().length() >= 4)
     {
       return true;
@@ -139,38 +135,35 @@ public class CelebrityGame
     return false;
   }
   
-   /**
+  /**
    * Checks that the supplied clue has at least 10 characters or is a series of clues
-   * This method will be expanded based on your subclass of Celebrity.
+   * This method would be expanded based on your subclass of Celebrity.
    * @param clue The text of the clue(s)
-   * @param type Supports a subclass of Celebrity (LiteratureCelebrity)
+   * @param type Supports a subclass of Celebrity 
    * @return If the clue is valid.
    */
   public boolean validateClue(String clue, String type)
   {
     boolean validClue = false;
-    if(type.equalsIgnoreCase("literature")) {
-        String[] temp = clue.split(",");
-        if(temp.length > 1) return true;
-        else return false;
-    }
-    else if (clue.trim().length() >= 10)
-    {
-      validClue = true;
-      
-    }
-    
-    return validClue;
-  }
-  
-  public boolean validateClue2(String clue, String type)
-  {
     if (clue.trim().length() >= 10)
     {
-      return true;
+      validClue = true;
+      if (type.equalsIgnoreCase("literature"))
+      {
+        String[] temp = clue.split(",");
+        if (temp.length > 1)
+        {
+          validClue = true;
+        }
+        else
+        {
+          validClue = false;
+        }
+      }
+      else if (type.equalsIgnoreCase("cartoon"))
+        validClue = clue.indexOf(",")!=-1;
     }
-    
-    return false;
+    return validClue;
   }
   
   /**
@@ -193,5 +186,5 @@ public class CelebrityGame
   {
     return gameCelebrity.getClue();
   }
-  
+
 }

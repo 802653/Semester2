@@ -60,7 +60,7 @@ public class CelebrityGame
      * Why use the .trim() method on the supplied String parameter? What
      * would need to be done to support a score?
      */
-    if ((guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer())) || guess.equals("DEBUG"))
+    if (guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer()))
     {
       matches = true;
       celebGameList.remove(0);
@@ -74,6 +74,7 @@ public class CelebrityGame
       }
       
     }
+    
     return matches;
   }
   
@@ -105,8 +106,9 @@ public class CelebrityGame
   {
     
     Celebrity currentCelebrity;
-    if(type.equals("Celebrity")) currentCelebrity = new Celebrity(name, guess);
-    else currentCelebrity = new LiteraryCelebrity(name, guess);
+   
+    currentCelebrity = new Celebrity(name, guess);
+  
     this.celebGameList.add(currentCelebrity);
     
   }
@@ -149,12 +151,8 @@ public class CelebrityGame
   public boolean validateClue(String clue, String type)
   {
     boolean validClue = false;
-    if(type.equalsIgnoreCase("literature")) {
-        String[] temp = clue.split(",");
-        if(temp.length > 1) return true;
-        else return false;
-    }
-    else if (clue.trim().length() >= 10)
+    
+    if (clue.trim().length() >= 10)
     {
       validClue = true;
       

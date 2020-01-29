@@ -122,7 +122,7 @@ public class StartPanel extends JPanel
 		this.celebrityRadio = new JRadioButton("Celebrity");
 		this.literatureRadio = new JRadioButton("Literature Celebrity");
 		this.celebrityClue = "Enter the clue for the celebrity";
-		this.literatureClue = "Enter the book this character was written in, then seperated by commas other the hint";
+		this.literatureClue = "Enter the clues for the literature celeb separated by commas";
 		this.clueLabel = new JLabel(celebrityClue);
 		
 		this.answerField = new JTextField("Type celebrity here (4 letters minimum thx Cher)");
