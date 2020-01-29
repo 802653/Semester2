@@ -25,6 +25,8 @@ public class CelebrityGame
    */
   private ArrayList<Celebrity> celebGameList;
   
+  private String mode = "NORMAL";
+  
   /**
    * Builds the game and starts the GUI
    */
@@ -33,6 +35,14 @@ public class CelebrityGame
     celebGameList = new ArrayList<Celebrity>();
     gameWindow = new CelebrityFrame(this);
     prepareGame();
+  }
+  
+  public String getMode(){
+      return mode;
+  }
+  
+  public void setMode(String mode) {
+     this.mode = mode;
   }
   
   /**
@@ -106,7 +116,7 @@ public class CelebrityGame
     
     Celebrity currentCelebrity;
     if(type.equals("Celebrity")) currentCelebrity = new Celebrity(name, guess);
-    else currentCelebrity = new LiteraryCelebrity(name, guess);
+    else currentCelebrity = new FootballCelebrity(name, guess);
     this.celebGameList.add(currentCelebrity);
     
   }

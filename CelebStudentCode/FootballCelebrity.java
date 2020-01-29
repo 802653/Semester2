@@ -12,26 +12,26 @@ import java.util.*;
  * 22/04/2019
  */
 // they also didnt provide us with the lit celeb, so had to borrow from cartoon
-public class LiteraryCelebrity extends Celebrity {
+public class FootballCelebrity extends Celebrity {
   private String book;
-  public LiteraryCelebrity(String answer, String clue)
+  public FootballCelebrity(String answer, String clue)
   {
     super(answer, clue.substring(clue.indexOf(",")+1));
     book = clue.substring(0,clue.indexOf(","));
-    setAnswer(clue.substring(clue.indexOf(",") + 1));
+    setAnswer(answer);
   }
   
   @Override
   public String getClue() 
   {
     if(Math.random()<0.5)
-      return "Appeared in " + book;
+      return "Played as " + book;
     return super.getClue();
   }
   @Override
   public String toString() 
   {
-    return super.toString() + ", and the character appeared in " + book;
+    return super.toString() + ", and the character played as " + book;
   }
   
   public void setClue(String clue) 

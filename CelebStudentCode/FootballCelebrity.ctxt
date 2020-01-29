@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=LiteraryCelebrity
+comment0.target=FootballCelebrity
 comment0.text=\r\n\ \r\n\ @author\ Sage\ Miller\r\n\ 22/04/2019\r\n
 comment1.params=answer\ clue
-comment1.target=LiteraryCelebrity(java.lang.String,\ java.lang.String)
+comment1.target=FootballCelebrity(java.lang.String,\ java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ getClue()
 comment3.params=
