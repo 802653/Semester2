@@ -63,7 +63,7 @@ public class ElevensBoard {
         List<Integer> cIndexes = board.cardIndexes();
         System.out.println(cIndexes);
         for(int i = 0; i < cIndexes.size(); i++) {
-            System.out.println(cIndexes.get(i));
+            System.out.println(cIndexes.get(i).toString());
         }
     }
     
